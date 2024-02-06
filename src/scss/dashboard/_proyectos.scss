@@ -1,0 +1,161 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+.no-proyectos{
+    text-align: center;   
+}
+.listado-proyectos{
+    margin-top: 3rem;
+    @include m.grid(1, 2rem);
+    @include m.tablet {
+        @include m.grid(2, 2rem);
+    }
+    @include m.desktop {
+        @include m.grid(3, 1rem);
+    }
+    .card{
+        //SOMBRAS
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.4s;
+        &:hover{
+            box-shadow: 0 8px 18px 0 rgba(0, 0, 0, 0.4);
+        }
+        background-color: v.$blanco;
+        border-radius: .6rem;
+        min-height: 15rem;
+        margin-bottom: 2rem;
+        padding: 2rem 4rem;
+        .title-card{
+            margin: 0 0 2rem 0;
+            font-size: 2rem;
+            text-align: center;
+        }
+        .p-card{
+            margin: 0;
+            font-size: 1.5rem;
+            span{
+                font-weight: bold;
+                color: v.$dixie-600;
+            }
+            .estado{
+                color: v.$verde;
+            }
+        }
+        .boton{
+            @include m.boton(v.$dixie-600, v.$blanco);
+            padding: 1rem;
+            margin-top: 3rem;
+            text-transform: uppercase;
+        }
+        .opciones{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    .card-tarea{
+        min-width: 30rem;
+        max-width: 35rem;
+    }
+}
+
+.listado-tareas {
+    margin-top: 3rem;
+    @include m.grid(1, 2rem);
+
+    @include m.tablet {
+        @include m.grid(2, 2rem);
+    }
+
+    @include m.desktop {
+        @include m.grid(2, 2rem);
+    }
+
+    @include m.desktops {
+        @include m.grid(3, 1rem);
+    }
+    @include m.desktopxl {
+        @include m.grid(4, 1rem);
+    }
+
+    .card {
+        //SOMBRAS
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.4s;
+
+        &:hover {
+            box-shadow: 0 8px 18px 0 rgba(0, 0, 0, 0.4);
+        }
+
+        background-color: v.$blanco;
+        border-radius: .6rem;
+        width: auto;
+        min-height: 15rem;
+        margin-bottom: 2rem;
+        padding: 2rem 4rem;
+
+        .title-card {
+            margin: 0 0 2rem 0;
+            font-size: 2rem;
+            text-align: center;
+            &::after {
+                content: '';
+                display: block;
+                width: auto;
+                height: .4rem;
+                background-color: v.$gris;
+                margin-top: .5rem;
+            }
+        }
+
+        .p-card-tarea {
+            margin: 0;
+            font-size: 1.8rem;
+
+            span {
+                font-weight: bold;
+                color: v.$cyan;
+            }
+            .span-dif{
+                font-weight: normal;
+                color: v.$dixie-700;
+            }
+
+            .estado {
+                color: v.$verde;
+            }
+            .Finalizada{
+                color: v.$verde;
+            }
+            .Pendiente{
+                color: v.$rojo;
+            }
+            .Revision{
+                color: v.$indigo;
+            }
+        }
+
+        .boton {
+            @include m.boton(v.$dixie-500, v.$blanco);
+            padding: 1rem;
+            margin-top: 3rem;
+            text-transform: uppercase;
+            border-radius: .5rem;
+        }
+        .boton-archivar{
+            @include m.boton(lighten(v.$rojo ,30%) ,v.$blanco);
+            padding: 1rem;
+            margin-top: 3rem;
+            border-radius: .5rem;
+            text-transform: uppercase;
+        }
+
+        .opciones {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .card-tarea {
+        min-width: 30rem;
+        max-width: 35rem;
+    }
+}

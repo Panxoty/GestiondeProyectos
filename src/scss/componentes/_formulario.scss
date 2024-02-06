@@ -1,0 +1,44 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+.formulario{
+    margin-top: 4rem;
+    .campo{
+        display: flex;
+        align-items: center; //centrar verticalmente
+        margin-bottom: 2rem;
+
+        label {
+            flex: 0 0 12rem;
+        }
+    
+        input {
+            flex: 1;
+            padding: .9rem;
+            border: none;
+            background-color: lighten(v.$gris, 40%);
+            border-radius: 0.5rem;
+        }
+        select{
+            flex: 1;
+            padding: .9rem;
+            border: none;
+            background-color: lighten(v.$gris, 40%);
+            border-radius: 0.5rem;
+        }
+    }
+    .campo-boton{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 3rem;
+
+    }
+}
+.campo-2{
+    display: flex;
+    justify-content: space-between;
+
+}
+.boton-actualizar{
+    @include m.boton(v.$naranja, v.$blanco);
+    text-transform: uppercase;
+}

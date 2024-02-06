@@ -1,0 +1,20 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+.login{
+    margin-top: 5rem;
+    .title{
+        background: linear-gradient(to right, v.$naranja 0%, lighten(v.$naranja, 25%) 100%);
+        color: transparent;
+        background-clip: text;
+        font-size: 7rem;
+        text-align: center;
+        @include m.tablet {
+            font-size: 10rem;
+        }
+    }
+    input[type="submit"]{
+        @include m.boton (v.$naranja, v.$blanco);
+        border-radius: 0.2rem;
+        padding: 1rem;
+    }
+}
