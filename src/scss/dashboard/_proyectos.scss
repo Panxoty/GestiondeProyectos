@@ -123,13 +123,32 @@
                 color: v.$verde;
             }
             .Finalizada{
-                color: v.$verde;
+                background-color: v.$verde;
+                padding: .2rem .7rem;
+                color: v.$blanco;
+                border-radius: 2rem;
+                font-size: 1.6rem;
             }
             .Pendiente{
-                color: v.$rojo;
+                background-color: v.$rojo;
+                padding: .2rem .7rem;
+                color: v.$blanco;
+                border-radius: 2rem;
+                font-size: 1.6rem;
             }
             .Revision{
-                color: v.$indigo;
+                background-color: v.$indigo;
+                padding: .2rem .7rem;
+                color: v.$blanco;
+                border-radius: 2rem;
+                font-size: 1.6rem;
+            }
+            .En.proceso{
+                background-color: v.$cyan;
+                padding: .2rem .7rem;
+                color: v.$blanco;
+                border-radius: 2rem;
+                font-size: 1.6rem;
             }
         }
 
